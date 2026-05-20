@@ -1,5 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
-import { AUTH_COOKIE } from "@/lib/auth";
+import { AUTH_COOKIE } from "@/lib/session-cookie";
 
 const PUBLIC = ["/", "/login", "/register", "/forgot-password"];
 

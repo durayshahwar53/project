@@ -2,8 +2,9 @@ import { cookies } from "next/headers";
 import { connectDB } from "./db";
 import { verifyToken, JWTPayload } from "./jwt";
 import { User, IUser } from "@/models/User";
+import { AUTH_COOKIE } from "./session-cookie";
 
-export const AUTH_COOKIE = "tuf_session";
+export { AUTH_COOKIE };
 
 export async function getSessionPayload(): Promise<JWTPayload | null> {
   const store = await cookies();
